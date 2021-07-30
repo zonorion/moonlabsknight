@@ -21,10 +21,10 @@ function solve(names: string[]) : string[] {
                     prefixAvail = lastChar
                 }
             } else {
-                // map prefix exist last char
-                mapPrefix.set(lastChar, mapPrefix.get(lastChar) + 1)
                 // if  all char of name existed
                 if (lastChar === name) {
+                    // increase count of last char
+                    mapPrefix.set(lastChar, mapPrefix.get(lastChar) + 1)
                     prefixAvail = `${name} ${mapPrefix.get(lastChar)}`
                 }
             }
